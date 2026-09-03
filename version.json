@@ -1,6 +1,6 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Nový systémový odpad (26 GB+), opravená diakritika u ovladačů, nová detekce PnP zařízení a zrychlená telemetrie.",
+  "changelog": "Oprava čištění systémových dočasných souborů, zobrazení teplot CPU a GPU v živé telemetrii, automatická detekce nových verzí.",
   "mandatory": false
 }
