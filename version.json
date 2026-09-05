@@ -1,6 +1,6 @@
 {
-  "version": "1.2.2",
+  "version": "1.2.3",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Steam-style menu pod logem Lumina (aktualizace, nastavení, ukončení), opravená nativní ikona v záhlaví okna a elegantní zaoblené telemetrické přepínače.",
+  "changelog": "Interaktivní Steam-menu s možnostmi pod hlavním logem v bočním panelu, čisté záhlaví okna bez malé ikony, přímé ukončení aplikace.",
   "mandatory": false
 }
