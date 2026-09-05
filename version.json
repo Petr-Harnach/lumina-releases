@@ -1,6 +1,6 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Nová nativní ikona aplikace na ploše, kompletní české názvy na nástěnce, SVG mikro-ikony u telemetrie a nový redesign nastavení.",
+  "changelog": "Steam-style menu pod logem Lumina (aktualizace, nastavení, ukončení), opravená nativní ikona v záhlaví okna a elegantní zaoblené telemetrické přepínače.",
   "mandatory": false
 }
