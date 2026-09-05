@@ -1,6 +1,6 @@
 {
-  "version": "1.2.3",
+  "version": "1.2.4",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Interaktivní Steam-menu s možnostmi pod hlavním logem v bočním panelu, čisté záhlaví okna bez malé ikony, přímé ukončení aplikace.",
+  "changelog": "Čisté moderní záhlaví okna pouze s ovládacími tlačítky, oprava zamykání souborů při auto-update (Kód 5), Steam-menu pod velkým logem.",
   "mandatory": false
 }
