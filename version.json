@@ -1,6 +1,6 @@
 {
-  "version": "1.2.4",
+  "version": "1.2.5",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Čisté moderní záhlaví okna s ovládacími prvky, rychlá nabídka akcí pod hlavním logem a vylepšená stabilita aktualizací.",
+  "changelog": "Čisté moderní záhlaví okna bez rušivé ikony, rychlá nabídka akcí pod hlavním logem a vylepšená stabilita aktualizací.",
   "mandatory": false
 }
