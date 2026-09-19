@@ -10,7 +10,7 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 Nejnovější verzi instalačního balíčku stáhnete přímo zde:
 
-* **[Stáhnout LuminaSetup.exe (Poslední vydání v1.2.5)](https://github.com/Petr-Harnach/lumina-releases/releases/latest/download/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Poslední vydání v1.3.0)](https://github.com/Petr-Harnach/lumina-releases/releases/latest/download/LuminaSetup.exe)**
 
 ---
 
