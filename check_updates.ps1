@@ -77,6 +77,20 @@ try {
                     }
                 }
 
+                # If the current installed driver version is already equal to or newer than the available update, skip it!
+                if ($curVer -and $availVer -and $curVer -ne "Windows Update" -and $availVer -ne "Latest WHQL") {
+                    if ($curVer.Trim() -eq $availVer.Trim()) {
+                        continue
+                    }
+                    try {
+                        $vCur = [version]$curVer.Trim()
+                        $vAvail = [version]$availVer.Trim()
+                        if ($vCur.CompareTo($vAvail) -ge 0) {
+                            continue
+                        }
+                    } catch {}
+                }
+
                 # Use matched hardware device name if found, otherwise official update title
                 $dispTitle = if ($matchedDev) { $matchedDev.DeviceName } else { $update.Title }
 
