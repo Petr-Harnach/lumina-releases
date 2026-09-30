@@ -2,7 +2,7 @@
 set -e
 
 echo "=========================================================="
-echo "       Lumina System Manager 1.3.1 - Linux Installer      "
+echo "       Lumina System Manager 1.4.0 - Linux Installer      "
 echo "=========================================================="
 
 TMP_DIR=$(mktemp -d)
