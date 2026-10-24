@@ -11,7 +11,7 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 * **[Stáhnout LuminaSetup.exe (Vydání v1.4.4)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
-* *(Případně alternativní přímý odkaz: [LuminaSetup.exe](https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe))*
+* **[Stáhnout jako ZIP archiv (LuminaSetup.zip)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.zip)** *(doporučeno, pokud vám Microsoft Edge / Chrome blokuje přímé stažení `.exe`)*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
 2. Zvolte instalační složku a potvrďte instalaci.
