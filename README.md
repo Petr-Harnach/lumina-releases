@@ -6,24 +6,25 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 ---
 
-## 🚀 Rychlé stažení & Instalace
-
-### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
-* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.0)](https://github.com/Petr-Harnach/lumina-releases/releases/latest/download/Lumina-macOS.zip)**
-
-1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
-2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
-3. Spusťte Lumina přímo z Launchpadu nebo Spotlightu.
-
----
+## 🚀 Rychlé stažení & Instalace (Verze v1.4.4)
 
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
-* **[Stáhnout LuminaSetup.exe (Vydání v1.4.0)](https://github.com/Petr-Harnach/lumina-releases/releases/latest/download/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Vydání v1.4.4)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
+* *(Případně alternativní přímý odkaz: [LuminaSetup.exe](https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe))*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
 2. Zvolte instalační složku a potvrďte instalaci.
 3. Instalátor automaticky nakonfiguruje systémovou službu na pozadí a vytvoří zástupce na ploše i v nabídce Start.
+
+---
+
+### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
+* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.4)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
+
+1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
+2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
+3. Spusťte Lumina přímo z Launchpadu nebo Spotlightu.
 
 ---
 
@@ -38,7 +39,10 @@ curl -sSL https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/in
 
 ---
 
-## 💎 Klíčové funkce verze v1.4.0
+## 💎 Klíčové funkce a novinky ve verzi v1.4.4
+* **Správa a online ověřování grafických ovladačů:** Tříúrovňové srovnání verzí (nainstalováno vs. Windows Update WHQL vs. oficiální cloud výrobce) s možností přímého stažení instalačních balíčků (.exe).
+* **Obnova plynulosti po resetu adaptéru (Zero-Lag):** Okamžitá detekce systémové zprávy `WM_DISPLAYCHANGE`, dočasné odlehčení náročných grafických filtrů a bleskový restart aplikace pro zachování plné DirectX 11 hardwarové akcelerace.
+* **Čistota a přehlednost rozhraní:** Odstranění redundantních informačních karet pro maximální prostor na podstatné systémové informace.
 * **Nativní podpora macOS:** Ultralehký Cocoa / AppKit bundle (~600 KB), Metal GPU a Mach telemetrie, správa systémových aktualizací Apple Siliconu, Sleepimage & Swap advisor.
 * **Blesková analýza disku:** Extrémně rychlý paralelní skener úložného prostoru s post-order stromovou agregací.
 * **Smart Disk Advisor:** Inteligentní transparentní rádce pro úsporu místa a bezpečná recyklace instalačních souborů do systémového Koše.
