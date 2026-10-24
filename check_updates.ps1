@@ -146,6 +146,112 @@ try {
     }
 } catch {}
 
+# -------------------------------------------------------------
+# Online Dedicated GPU Driver Intelligence (NVIDIA GeForce Game Ready)
+# -------------------------------------------------------------
+try {
+    $videoControllers = Get-CimInstance Win32_VideoController | Where-Object { $_.Name }
+    foreach ($gpu in $videoControllers) {
+        $gpuName = $gpu.Name
+        $isNvidia = ($gpuName -match "nvidia|geforce|rtx|gtx")
+
+        if ($isNvidia) {
+            $rawVer = $gpu.DriverVersion
+            $installedGeForceVer = ""
+            if ($rawVer) {
+                $parts = $rawVer.Trim().Split('.')
+                if ($parts.Count -eq 4) {
+                    $c = $parts[2]
+                    $d = $parts[3]
+                    if ($c.Length -ge 2 -and $d.Length -ge 4) {
+                        $major = $c.Substring($c.Length - 1, 1) + $d.Substring(0, 2)
+                        $minor = $d.Substring(2)
+                        $installedGeForceVer = "$major.$minor"
+                    }
+                }
+            }
+
+            try {
+                $nvUrl = "https://gfwsl.geforce.com/services_toolkit/services/com/nvidia/services/AjaxDriverService.php?func=DriverManualLookup&psid=120&pfid=929&osID=57&languageCode=1033&beta=0&isWHQL=1&dch=1"
+                $req = [System.Net.HttpWebRequest]::Create($nvUrl)
+                $req.UserAgent = "Mozilla/5.0"
+                $req.Timeout = 4000
+                $resp = $req.GetResponse()
+                $reader = New-Object System.IO.StreamReader($resp.GetResponseStream())
+                $rawNv = $reader.ReadToEnd()
+                $reader.Close()
+                $resp.Close()
+
+                $nvJson = $rawNv | ConvertFrom-Json
+                if ($nvJson -and $nvJson.IDS -and $nvJson.IDS.Count -gt 0) {
+                    $latestNv = $nvJson.IDS[0].downloadInfo
+                    $onlineVer = $latestNv.Version
+                    $dlUrl = $latestNv.DownloadURL
+                    $relDate = $latestNv.ReleaseDateTime
+
+                    $hasVendorUpdate = $false
+                    if ($installedGeForceVer -and $onlineVer) {
+                        try {
+                            $vInst = [version]$installedGeForceVer
+                            $vOnline = [version]$onlineVer
+                            if ($vOnline.CompareTo($vInst) -gt 0) {
+                                $hasVendorUpdate = $true
+                            }
+                        } catch {
+                            if ($onlineVer -ne $installedGeForceVer) { $hasVendorUpdate = $true }
+                        }
+                    }
+
+                    $foundExisting = $null
+                    for ($i = 0; $i -lt $updates.Count; $i++) {
+                        $u = $updates[$i]
+                        if ($u.Title -like "*$gpuName*" -or $gpuName -like "*$($u.Title)*" -or ($u.GpuVendor -eq "nvidia")) {
+                            $foundExisting = $u
+                            break
+                        }
+                    }
+
+                    if ($foundExisting) {
+                        $foundExisting.LatestVendorVersion = $onlineVer
+                        $foundExisting.VendorDownloadUrl = $dlUrl
+                        $foundExisting.VendorReleaseDate = $relDate
+                        $foundExisting.VendorDriverType = "Game Ready"
+                        $foundExisting.HasVendorUpdate = $hasVendorUpdate
+                        $foundExisting.VendorVersionDisplay = "GeForce $onlineVer (Game Ready)"
+                    } elseif ($hasVendorUpdate) {
+                        $dispCur = if ($installedGeForceVer) { "$rawVer (GeForce $installedGeForceVer)" } else { $rawVer }
+                        $updates += [PSCustomObject]@{
+                            Title               = $gpuName
+                            UpdateTitle         = "NVIDIA GeForce Game Ready Driver $onlineVer"
+                            DriverModel         = $gpuName
+                            CurrentVersion      = $dispCur
+                            AvailableVersion    = "GeForce $onlineVer (Game Ready)"
+                            RawCurrentVersion   = $rawVer
+                            RawAvailableVersion = $onlineVer
+                            ReleaseDate         = (Get-Date -Format "yyyy-MM-dd")
+                            Description         = "Oficiální herní Game Ready ovladač přímo od výrobce NVIDIA. Doporučeno pro moderní hry."
+                            IsDriver            = $true
+                            Categories          = "Grafická karta (GPU)"
+                            KBArticles          = "NVIDIA-GRD"
+                            Severity            = "Important"
+                            HardwareId          = if ($gpu.PNPDeviceID) { $gpu.PNPDeviceID } else { "" }
+                            IsSkipped           = $false
+                            IsGamingGpu         = $true
+                            GpuVendor           = "nvidia"
+                            LatestVendorVersion = $onlineVer
+                            VendorDownloadUrl   = $dlUrl
+                            VendorDriverType    = "Game Ready"
+                            HasVendorUpdate     = $true
+                            VendorOnly          = $true
+                            VendorVersionDisplay= "GeForce $onlineVer (Game Ready)"
+                        }
+                    }
+                }
+            } catch {}
+        }
+    }
+} catch {}
+
 # Deduplicate by Title
 $uniqueUpdates = @()
 $seenTitles = @{}
