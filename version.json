@@ -1,6 +1,6 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.1",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Plná nativní podpora macOS (Apple Silicon i Intel) a Windows. Živá telemetrie, správa aktualizací systému a firmwaru, blesková analýza disku, inteligentní rádce disku a transparentní čištění.",
+  "changelog": "Strategie ovladačů & transparentní certifikace stability: možnost volby mezi certifikovaným stabilním kanálem a spuštěním oficiální aplikace výrobce. Zvýšená spolehlivost a perzistence správy položek po spuštění systému.",
   "mandatory": false
 }
