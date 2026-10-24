@@ -1,4 +1,4 @@
-﻿[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $OutputEncoding = [System.Text.Encoding]::UTF8
 
 $devices = Get-CimInstance Win32_PnPSignedDriver | Where-Object { $_.DeviceName -and $_.DriverVersion }
@@ -94,12 +94,42 @@ try {
                 # Use matched hardware device name if found, otherwise official update title
                 $dispTitle = if ($matchedDev) { $matchedDev.DeviceName } else { $update.Title }
 
+                # Translate NVIDIA WDDM driver version (e.g. 32.0.16.2101) to commercial version (e.g. GeForce 621.01)
+                $formatNvidiaVer = {
+                    param($title, $vStr)
+                    if (-not $vStr -or $vStr -eq "Windows Update" -or $vStr -eq "Latest WHQL") { return $vStr }
+                    if ($title -match "nvidia|geforce|quadro|rtx|gtx") {
+                        $parts = $vStr.Trim().Split('.')
+                        if ($parts.Count -eq 4) {
+                            $c = $parts[2]
+                            $d = $parts[3]
+                            if ($c.Length -ge 2 -and ($d.Length -eq 4 -or $d.Length -eq 5)) {
+                                $lastC = $c.Substring($c.Length - 1, 1)
+                                if ($d.Length -ge 4) {
+                                    $major = $lastC + $d.Substring(0, 2)
+                                    $minor = $d.Substring(2)
+                                    return "$vStr (GeForce $major.$minor)"
+                                }
+                            }
+                        }
+                    }
+                    return $vStr
+                }
+
+                $curVerDisplay = & $formatNvidiaVer $dispTitle $curVer
+                $availVerDisplay = & $formatNvidiaVer $dispTitle $availVer
+
+                $isGamingGpu = ($dispTitle -match "nvidia|geforce|rtx|gtx|radeon|rx\s*\d|arc\s*[a-z]\d")
+                $gpuVendor = if ($dispTitle -match "nvidia|geforce|rtx|gtx") { "nvidia" } elseif ($dispTitle -match "radeon|amd") { "amd" } elseif ($dispTitle -match "intel|arc") { "intel" } else { "" }
+
                 $updates += [PSCustomObject]@{
                     Title            = $dispTitle
                     UpdateTitle      = $update.Title
                     DriverModel      = $update.DriverModel
-                    CurrentVersion   = $curVer
-                    AvailableVersion = $availVer
+                    CurrentVersion   = $curVerDisplay
+                    AvailableVersion = $availVerDisplay
+                    RawCurrentVersion = $curVer
+                    RawAvailableVersion = $availVer
                     ReleaseDate      = (Get-Date -Format "yyyy-MM-dd")
                     Description      = $update.Description
                     IsDriver         = $true
@@ -108,6 +138,8 @@ try {
                     Severity         = $update.MsrcSeverity
                     HardwareId       = $hwId
                     IsSkipped        = $false
+                    IsGamingGpu      = $isGamingGpu
+                    GpuVendor        = $gpuVendor
                 }
             }
         }
