@@ -1,6 +1,6 @@
 {
-  "version": "1.4.3",
+  "version": "1.4.4",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
-  "changelog": "Přímé online ověřování nejnovějších herních ovladačů: synchronizace verzí přímo s oficiálním cloudem výrobců grafických karet, přehledné srovnání nainstalované, stabilní i herní verze a možnost přímého stažení instalačních balíčků.",
+  "changelog": "Optimalizace a čistota rozhraní: odstranění redundantních bannerů ve správci ovladačů a okamžitá detekce restartu grafického subsystému pro obnovení plné plynulosti a hardwarové akcelerace bez prodlevy.",
   "mandatory": false
 }
