@@ -24,7 +24,9 @@ Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 
 1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
 2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
-3. Spusťte Lumina přímo z Launchpadu nebo Spotlightu.
+3. Spusťte Lumina přímo z Launchpadu, Spotlightu nebo složky Aplikace.
+   > 💡 **Tip při prvním spuštění (macOS Gatekeeper):**  
+   > Pokud macOS zobrazí hlášení, že vývojáře nelze ověřit, stačí v **Nastavení systému ➔ Soukromí a zabezpečení** kliknout dole na **„Přesto otevřít“**, případně v Terminálu zadat: `xattr -cr /Applications/Lumina.app`.
 
 ---
 
