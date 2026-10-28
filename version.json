@@ -1,6 +1,8 @@
 {
   "version": "1.4.4",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
+  "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
+  "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
   "changelog": "Optimalizace a čistota rozhraní: odstranění redundantních bannerů ve správci ovladačů a okamžitá detekce restartu grafického subsystému pro obnovení plné plynulosti a hardwarové akcelerace bez prodlevy.",
   "mandatory": false
 }
