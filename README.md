@@ -6,11 +6,11 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 ---
 
-## 🚀 Rychlé stažení & Instalace (Verze v1.4.4)
+## 🚀 Rychlé stažení & Instalace (Verze v1.4.6)
 
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
-* **[Stáhnout LuminaSetup.exe (Vydání v1.4.4)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Vydání v1.4.6)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
 * **[Stáhnout jako ZIP archiv (LuminaSetup.zip)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.zip)** *(doporučeno, pokud vám Microsoft Edge / Chrome blokuje přímé stažení `.exe`)*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
@@ -20,7 +20,7 @@ Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 ---
 
 ### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
-* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.4)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
+* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.6)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
 
 1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
 2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
@@ -41,11 +41,13 @@ curl -sSL https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/in
 
 ---
 
-## 💎 Klíčové funkce a novinky ve verzi v1.4.4
+## 💎 Klíčové funkce a novinky ve verzi v1.4.6
+* **Nativní přetahování okna záhlavím (macOS Titlebar Drag):** Plynulé přemisťování okna tažením za záhlaví s automatickým ukládáním pozice a rozměrů mezi spuštěními.
+* **Plnohodnotný Správce po spuštění na macOS:** Skutečné vypínání a zapínání aplikací spouštěných po přihlášení (Login Items) a služeb na pozadí (LaunchAgents) s okamžitou deaktivací a spolehlivou perzistencí po restartu.
+* **Hloubkový odinstalátor aplikací:** Bezpečný přesun odinstalovávaných aplikací do systémového Koše a automatické vyhledání a odstranění zbytků z uživatelské knihovny.
+* **Přímé propojení s obchodem aplikací:** Integrace rychlého přístupu k aktualizacím Mac App Store a podpora správců balíčků.
+* **Responzivní odznak aktualizací v boční liště:** Elegantní kompaktní pulzující notifikační tečka pro úzké zobrazení a pill badge v plné šířce.
 * **Správa a online ověřování grafických ovladačů:** Tříúrovňové srovnání verzí (nainstalováno vs. Windows Update WHQL vs. oficiální cloud výrobce) s možností přímého stažení instalačních balíčků (.exe).
-* **Obnova plynulosti po resetu adaptéru (Zero-Lag):** Okamžitá detekce systémové zprávy `WM_DISPLAYCHANGE`, dočasné odlehčení náročných grafických filtrů a bleskový restart aplikace pro zachování plné DirectX 11 hardwarové akcelerace.
-* **Čistota a přehlednost rozhraní:** Odstranění redundantních informačních karet pro maximální prostor na podstatné systémové informace.
-* **Nativní podpora macOS:** Ultralehký Cocoa / AppKit bundle (~600 KB), Metal GPU a Mach telemetrie, správa systémových aktualizací Apple Siliconu, Sleepimage & Swap advisor.
 * **Blesková analýza disku:** Extrémně rychlý paralelní skener úložného prostoru s post-order stromovou agregací.
 * **Smart Disk Advisor:** Inteligentní transparentní rádce pro úsporu místa a bezpečná recyklace instalačních souborů do systémového Koše.
 * **Kompletní dvojjazyčnost:** Stoprocentní podpora pro češtinu a angličtinu napříč celou aplikací.
