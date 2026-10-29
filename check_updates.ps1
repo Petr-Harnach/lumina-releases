@@ -262,9 +262,53 @@ foreach ($u in $updates) {
     }
 }
 
+# -------------------------------------------------------------
+# Optional Windows System Updates (OS, Cumulative, Quality & Feature)
+# -------------------------------------------------------------
+$windowsUpdates = @()
+try {
+    if ($null -eq $updateSession) {
+        $updateSession = New-Object -ComObject Microsoft.Update.Session
+    }
+    if ($null -ne $updateSession) {
+        $winSearcher = $updateSession.CreateUpdateSearcher()
+        $winSearcher.Online = $false
+        $winSearchResult = $winSearcher.Search("Type='Software' and IsInstalled=0 and IsHidden=0")
+        if ($null -eq $winSearchResult -or $winSearchResult.Updates.Count -eq 0) {
+            $winSearcher.Online = $true
+            $winSearchResult = $winSearcher.Search("Type='Software' and IsInstalled=0 and IsHidden=0")
+        }
+
+        if ($null -ne $winSearchResult -and $null -ne $winSearchResult.Updates) {
+            foreach ($u in $winSearchResult.Updates) {
+                $categories = @()
+                foreach ($cat in $u.Categories) { $categories += $cat.Name }
+                $catStr = if ($categories.Count -gt 0) { ($categories -join ", ") } else { "Systém Windows" }
+                
+                $kbList = ($u.KBArticleIDs -join ", ")
+                $kbDisplay = if (-not $kbList) { "Systémová" } else { "KB" + $kbList }
+
+                $sev = $u.MsrcSeverity
+                if (-not $sev) { $sev = "Volitelná" }
+
+                $windowsUpdates += [PSCustomObject]@{
+                    Title        = $u.Title
+                    Description  = if ($u.Description) { $u.Description } else { "Volitelná aktualizace operačního systému Windows" }
+                    KBArticles   = $kbDisplay
+                    Categories   = $catStr
+                    Severity     = $sev
+                    IsOptional   = $true
+                    IsDownloaded = $u.IsDownloaded
+                }
+            }
+        }
+    }
+} catch {}
+
 $result = @{
     scannedDriversCount = $scannedCount
     updates             = $uniqueUpdates
+    windowsUpdates      = $windowsUpdates
 }
 
 $result | ConvertTo-Json -Depth 5
