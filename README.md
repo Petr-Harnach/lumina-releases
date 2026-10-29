@@ -6,11 +6,11 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 ---
 
-## 🚀 Rychlé stažení & Instalace (Verze v1.4.6)
+## 🚀 Rychlé stažení & Instalace (Verze v1.4.7)
 
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
-* **[Stáhnout LuminaSetup.exe (Vydání v1.4.6)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Vydání v1.4.7)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
 * **[Stáhnout jako ZIP archiv (LuminaSetup.zip)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.zip)** *(doporučeno, pokud vám Microsoft Edge / Chrome blokuje přímé stažení `.exe`)*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
@@ -20,7 +20,7 @@ Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 ---
 
 ### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
-* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.6)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
+* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.7)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
 
 1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
 2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
@@ -41,7 +41,12 @@ curl -sSL https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/in
 
 ---
 
-## 💎 Klíčové funkce a novinky ve verzi v1.4.6
+## 💎 Klíčové funkce a novinky ve verzi v1.4.7
+* **Správce vývojářských služeb na macOS:** Plná podpora a ovládání běhu kontejnerových enginů (Docker), relačních databází (PostgreSQL, MySQL), vestavěného webového serveru Apache HTTP a cache pamětí (Redis).
+* **Plnohodnotná správa proměnných prostředí:** Načítání a správa uživatelských i systémových proměnných prostředí s okamžitou perzistencí do systémového profilu i subsystému launchd.
+* **Živá diagnostická konzole se streamovaným výstupem:** Terminálový výstup diagnostických síťových testů (Ping, Traceroute, DNS) v reálném čase.
+* **Přehled hardwarových zařízení:** Detekce zvukových zařízení, displejů, kamerových modulů a periferií.
+* **Nativní lokalizace a průvodce transparentním čištěním:** Kompletně přizpůsobené texty a vysvětlení pro platformu macOS ($TMPDIR, ~/Library/Caches, DerivedData, systémové protokoly).
 * **Nativní přetahování okna záhlavím (macOS Titlebar Drag):** Plynulé přemisťování okna tažením za záhlaví s automatickým ukládáním pozice a rozměrů mezi spuštěními.
 * **Plnohodnotný Správce po spuštění na macOS:** Skutečné vypínání a zapínání aplikací spouštěných po přihlášení (Login Items) a služeb na pozadí (LaunchAgents) s okamžitou deaktivací a spolehlivou perzistencí po restartu.
 * **Hloubkový odinstalátor aplikací:** Bezpečný přesun odinstalovávaných aplikací do systémového Koše a automatické vyhledání a odstranění zbytků z uživatelské knihovny.

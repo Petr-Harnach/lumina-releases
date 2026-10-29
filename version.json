@@ -1,9 +1,9 @@
 {
-  "version": "1.4.6",
+  "version": "1.4.7",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
   "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
   "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
-  "changelog": "Nativní přetahování okna záhlavím s pamatováním pozice, plnohodnotná správa programů po startu (položky přihlášení a služby na pozadí), přímé propojení s obchodem aplikací, hloubkový odinstalátor aplikací s odstraněním pozůstatků a responzivní odznak aktualizací v boční liště.",
+  "changelog": "Plná podpora správy vývojářských služeb (kontejnery, databáze a webové servery), správa proměnných prostředí s perzistencí, živá síťová diagnostická konzole se streamováním v reálném čase, detekce hardwarových zařízení a kompletní lokalizace průvodce čištěním a nastavení systému.",
   "mandatory": false
 }
 
