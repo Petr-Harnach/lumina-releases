@@ -6,11 +6,11 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 ---
 
-## 🚀 Rychlé stažení & Instalace (Verze v1.4.10)
+## 🚀 Rychlé stažení & Instalace (Verze v1.4.11)
 
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
-* **[Stáhnout LuminaSetup.exe (Vydání v1.4.10)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Vydání v1.4.11)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
 * **[Stáhnout jako ZIP archiv (LuminaSetup.zip)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.zip)** *(doporučeno, pokud vám Microsoft Edge / Chrome blokuje přímé stažení `.exe`)*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
@@ -20,7 +20,7 @@ Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 ---
 
 ### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
-* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.10)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
+* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.11)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
 
 1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
 2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
@@ -41,7 +41,9 @@ curl -sSL https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/in
 
 ---
 
-## 💎 Klíčové funkce a novinky ve verzi v1.4.10
+## 💎 Klíčové funkce a novinky ve verzi v1.4.11
+* **Volitelné systémové aktualizace Windows:** Přidána dedikovaná sekce pro vyhledávání a zobrazení volitelných systémových a kumulativních aktualizací operačního systému Windows (10 i 11) přes Windows Update Agent API (`Type='Software'`). Tyto aktualizace jsou striktně oddělené od hardwarových ovladačů a **neovlivňují celkové procento optimality a zdraví systému** na Nástěnce.
+* **Přímé přesměrování do Windows Update v Nastavení:** Tlačítka v panelu akcí i u jednotlivých záznamů aktualizací spouští oficiální systémový URI protokol `ms-settings:windowsupdate`, který spolehlivě otevírá Windows Update v Nastavení jak ve Windows 10, tak ve Windows 11.
 * **Zabezpečení a uzamčení vývojářských nástrojů (macOS):** Vývojářské rozhraní WebKit Web Inspector (DevTools) a kontextová nabídka pravého tlačítka myši jsou v produkčním režimu pro běžné uživatele striktně zakázány. Inspekce je povolena výhradně při spuštění aplikace s vývojářským přepínačem `--dev` nebo `--debug`.
 * **Nativní detekce aktualizací Mac App Store aplikací:** Přímé čtení interní cache databáze systémového démona `appstoreagent` (`storeSystem.db`) přes vestavěnou SQLite knihovnu. Lumina spolehlivě detekuje veškeré čekající aktualizace z Mac App Storu včetně názvu aplikace, nainstalované vs. dostupné verze, poznámek k vydání a přímého tlačítka pro aktualizaci.
 * **Rozšířená správa položek po spuštění a úloh na pozadí (macOS):** Kompletní synchronizace se systémovým nastavením *Aktivita aplikací na pozadí*, automatický překlad technických identifikátorů na čitelné názvy aplikací a živá detekce běžících procesů na pozadí s vizuálním indikátorem (`🟢 Běží na pozadí` / `⚪ Neběží na pozadí`).

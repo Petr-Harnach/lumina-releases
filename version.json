@@ -1,8 +1,8 @@
 {
-  "version": "1.4.10",
+  "version": "1.4.11",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
   "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
   "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
-  "changelog": "Zabezpečení a optimalizace uživatelského rozhraní na macOS: uzamčení vývojářských nástrojů a kontextové nabídky v produkčním prostředí s možností spuštění ve vývojářském režimu přes přepínač.",
+  "changelog": "Přidána kontrola volitelných systémových aktualizací operačního systému Windows s přímým přesměrováním do Nastavení. Volitelné systémové aktualizace jsou oddělené a neovlivňují skóre optimality hardware.",
   "mandatory": false
 }
