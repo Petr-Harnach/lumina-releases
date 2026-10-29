@@ -1,8 +1,8 @@
 {
-  "version": "1.4.9",
+  "version": "1.4.10",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
   "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
   "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
-  "changelog": "Nativní detekce aktualizací aplikací přímo z interní databáze systémového obchodu na macOS, okamžité zobrazení čekajících verzí včetně poznámek k vydání a optimalizované spouštění aktualizací.",
+  "changelog": "Zabezpečení a optimalizace uživatelského rozhraní na macOS: uzamčení vývojářských nástrojů a kontextové nabídky v produkčním prostředí s možností spuštění ve vývojářském režimu přes přepínač.",
   "mandatory": false
 }

@@ -6,11 +6,11 @@ Lumina kombinuje výkon a nízkou spotřebu systémových prostředků nativníh
 
 ---
 
-## 🚀 Rychlé stažení & Instalace (Verze v1.4.9)
+## 🚀 Rychlé stažení & Instalace (Verze v1.4.10)
 
 ### 🪟 Pro Windows (10 & 11) – Plná podpora
 Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
-* **[Stáhnout LuminaSetup.exe (Vydání v1.4.9)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
+* **[Stáhnout LuminaSetup.exe (Vydání v1.4.10)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.exe)**
 * **[Stáhnout jako ZIP archiv (LuminaSetup.zip)](https://github.com/Petr-Harnach/lumina-releases/raw/main/LuminaSetup.zip)** *(doporučeno, pokud vám Microsoft Edge / Chrome blokuje přímé stažení `.exe`)*
 
 1. Stáhněte a spusťte `LuminaSetup.exe`.
@@ -20,7 +20,7 @@ Nejnovější verzi moderního grafického instalátoru stáhnete přímo zde:
 ---
 
 ### 🍏 Pro macOS (Apple Silicon M1/M2/M3/M4/M5 & Intel) – Plná podpora
-* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.9)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
+* **[Stáhnout Lumina-macOS.zip (Vydání v1.4.10)](https://github.com/Petr-Harnach/lumina-releases/raw/main/Lumina-macOS.zip)**
 
 1. Stáhněte a rozbalte balíček `Lumina-macOS.zip`.
 2. Přesuňte aplikaci `Lumina.app` do složky `/Applications`.
@@ -41,8 +41,9 @@ curl -sSL https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/in
 
 ---
 
-## 💎 Klíčové funkce a novinky ve verzi v1.4.9
-* **Nativní detekce aktualizací Mac App Store aplikací:** Přímé čtení interní cache databáze systémového démona `appstoreagent` (`storeSystem.db`) přes vestavěnou SQLite knihovnu. Lumina nyní spolehlivě detekuje veškeré čekající aktualizace z Mac App Storu včetně názvu aplikace, nainstalované vs. dostupné verze, poznámek k vydání a přímého tlačítka pro aktualizaci i na počítačích bez nainstalovaných vývojářských balíčkovacích nástrojů.
+## 💎 Klíčové funkce a novinky ve verzi v1.4.10
+* **Zabezpečení a uzamčení vývojářských nástrojů (macOS):** Vývojářské rozhraní WebKit Web Inspector (DevTools) a kontextová nabídka pravého tlačítka myši jsou v produkčním režimu pro běžné uživatele striktně zakázány. Inspekce je povolena výhradně při spuštění aplikace s vývojářským přepínačem `--dev` nebo `--debug`.
+* **Nativní detekce aktualizací Mac App Store aplikací:** Přímé čtení interní cache databáze systémového démona `appstoreagent` (`storeSystem.db`) přes vestavěnou SQLite knihovnu. Lumina spolehlivě detekuje veškeré čekající aktualizace z Mac App Storu včetně názvu aplikace, nainstalované vs. dostupné verze, poznámek k vydání a přímého tlačítka pro aktualizaci.
 * **Rozšířená správa položek po spuštění a úloh na pozadí (macOS):** Kompletní synchronizace se systémovým nastavením *Aktivita aplikací na pozadí*, automatický překlad technických identifikátorů na čitelné názvy aplikací a živá detekce běžících procesů na pozadí s vizuálním indikátorem (`🟢 Běží na pozadí` / `⚪ Neběží na pozadí`).
 * **Přímé propojení s obchodem aplikací (Mac App Store):** Jedním kliknutím v sekci *Aktualizace softwaru* otevře nativní záložku aktualizací v Mac App Storu.
 * **Správce vývojářských služeb na macOS:** Plná podpora a ovládání běhu kontejnerových enginů (Docker), relačních databází (PostgreSQL, MySQL), vestavěného webového serveru Apache HTTP a cache pamětí (Redis).
