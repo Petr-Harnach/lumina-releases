@@ -1,8 +1,9 @@
 {
-  "version": "1.4.11",
+  "version": "1.4.12",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
   "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
   "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
-  "changelog": "Přidána kontrola volitelných systémových aktualizací operačního systému Windows s přímým přesměrováním do Nastavení. Volitelné systémové aktualizace jsou oddělené a neovlivňují skóre optimality hardware.",
+  "changelog": "Vyladění rozhraní: sjednocení rozvržení živé telemetrie disků se systémem a sítí, zarovnání sekce volitelných aktualizací a čistější výpis v konzoli.",
   "mandatory": false
 }
+
