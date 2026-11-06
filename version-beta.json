@@ -1,9 +1,9 @@
 {
-  "version": "1.5.0-beta.1",
+  "version": "1.5.1-beta.1",
   "channel": "beta",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
   "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/Lumina-macOS.zip",
   "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/lumina-linux.tar.gz",
-  "changelog": "Lumina v1.5.0-beta.1: Integrace do oznamovací oblasti (System Tray) s rychlými akcemi a tichým startem, přímá instalace balíčků při změně technologie (winget install --force), trvalé tlačítko přechodu do aplikace při chybě, stabilizace grafického adaptéru a volba autostartu.",
+  "changelog": "Lumina v1.5.1-beta.1: Integrace do oznamovací oblasti (System Tray) s rychlými akcemi a tichým startem, přímá instalace balíčků při změně technologie (winget install --force), trvalé tlačítko přechodu do aplikace při chybě, stabilizace grafického adaptéru a volba autostartu.",
   "mandatory": false
 }
