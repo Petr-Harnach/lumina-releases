@@ -1,9 +1,8 @@
 {
-  "version": "1.5.0-beta.1",
-  "channel": "beta",
-  "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
-  "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/Lumina-macOS.zip",
-  "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/lumina-linux.tar.gz",
-  "changelog": "Lumina v1.5.0-beta.1: Vynucené opakování instalací při změně technologie (--force), přímé spuštění aplikace při chybě balíčku, prevence zamrznutí při aktualizaci grafických ovladačů a přepínač autostartu v Nastavení.",
+  "version": "1.4.13",
+  "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
+  "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
+  "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
+  "changelog": "Zvýšená spolehlivost instalací software a ovladačů: automatické opakování při změně instalátoru, přímé spuštění aplikace při selhání balíčku, stabilizace grafického adaptéru během instalace ovladačů, volba aktualizačního kanálu (Stabilní / Beta) a možnost automatického spuštění se systémem.",
   "mandatory": false
 }
