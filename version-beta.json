@@ -1,0 +1,9 @@
+{
+  "version": "1.4.13",
+  "channel": "beta",
+  "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/LuminaSetup.exe",
+  "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/Lumina-macOS.zip",
+  "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/main/lumina-linux.tar.gz",
+  "changelog": "Beta kanál je připraven pro nadcházející náhledové verze v1.5.0.",
+  "mandatory": false
+}
