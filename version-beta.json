@@ -1,9 +1,7 @@
 {
-  "version": "1.5.1-beta.3",
-  "channel": "beta",
-  "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
-  "download_url_mac": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/Lumina-macOS.zip",
-  "download_url_linux": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/lumina-linux.tar.gz",
-  "changelog": "Lumina v1.5.1-beta.3: Oprava inicializace frontendového rozhraní, tichá instalace balíčků bez UAC oken přes systémovou službu LuminaService, interaktivní správa fronty aktualizací s možností okamžitého zastavení, přednostního posunu balíčků v pořadí a vyřazení položek z fronty.",
+  "version": "1.5.1-beta.4",
+  "url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
+  "releaseDate": "2026-11-07",
+  "changelog": "Lumina v1.5.1-beta.4: Dynamické přidávání aplikací a ovladačů do běžící fronty aktualizací tlačítkem (+ Do fronty), zkrácení popisku v oznamovací oblasti na 'Lumina', zjednodušená kontextová nabídka v liště a optimalizace správy procesů.",
   "mandatory": false
 }
