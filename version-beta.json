@@ -1,8 +1,8 @@
 {
-  "version": "1.5.1-beta.4",
+  "version": "1.5.1-beta.5",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
   "url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
-  "releaseDate": "2026-11-07",
-  "changelog": "Lumina v1.5.1-beta.4: Dynamické přidávání aplikací a ovladačů do běžící fronty aktualizací tlačítkem (+ Do fronty), zkrácení popisku v oznamovací oblasti na 'Lumina', zjednodušená kontextová nabídka v liště a optimalizace správy procesů.",
+  "releaseDate": "2026-11-08",
+  "changelog": "Lumina v1.5.1-beta.5: Spolehlivé ukládání nastavení do uživatelského profilu, automatické spuštění Lumina při startu systému jako výchozí volba, korektní minimalizace i zavření (X) do oznamovací oblasti (System Tray) s možností ukončení přes nabídku v liště a interaktivní upozornění na neuložené změny v nastavení při přechodu mezi záložkami.",
   "mandatory": false
 }
