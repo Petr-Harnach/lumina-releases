@@ -1,8 +1,8 @@
 {
-  "version": "1.5.1-beta.6",
+  "version": "1.5.1-beta.7",
   "download_url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
   "url": "https://raw.githubusercontent.com/Petr-Harnach/lumina-releases/beta/LuminaSetup.exe",
   "releaseDate": "2026-11-08",
-  "changelog": "Lumina v1.5.1-beta.6: Tichý automatický stahovač aktualizací na pozadí, okamžitý restart a povýšení systému jedním kliknutím bez čekání, svítící indikátor připravené aktualizace v horní liště a předchystání instalačních balíčků pro bleskový přechod na novou verzi.",
+  "changelog": "Lumina v1.5.1-beta.7: Plynulý obousměrný přechod mezi aktualizačními kanály (Stabilní a Beta), kompaktní grafické okno aktualizace s ukazatelem průběhu v procentech, čisté statické zobrazení bez rušivého pulzování a náhledové akce pro okamžité vyzkoušení aktualizačního rozhraní.",
   "mandatory": false
 }
